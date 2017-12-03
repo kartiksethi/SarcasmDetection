@@ -1,11 +1,11 @@
 # SarcasmDetection
 A deep learning implementation to classify texts as sarcastic or not sarcastic.
 
-Dataset used: [sarcasmV2 dataset](https://nlds.soe.ucsc.edu/sarcasm2).
+Dataset used: [sarcasmV2 dataset](https://nlds.soe.ucsc.edu/sarcasm2)
 
 ### Steps to be followed to make the code work:
 * Install latest version of [Keras](https://keras.io/) and [TensorFlow](https://www.tensorflow.org/install/)
-* Install the other python libraries:numpy, pandas, scikit-learn, matplotlib, etc.
+* Install the other python libraries: numpy, pandas, scikit-learn, matplotlib, etc.
 * **data_preprocessing.py** contains the script to pre-process and load the data.
 * All the different models are stored in **models.py**.
 * **sarcasm_classifier.py** is the main file and it contains the code for training and testing the models.
