@@ -100,7 +100,9 @@ class SarcasmDataLoader:
             # saving the embeddings for this dataset so we needn't open the
             # glove file next time
             word_embeddings = np.array(word_embeddings)
+            # Use this file with '--trained-embeddings' command line arg when training again
             np.save('word_embeddings_sarcasm_dataset.npy', word_embeddings)
+            print("Saved word embeddings loaded")
             return word_embeddings, 300   # change this 300 accordingly
 
         # Loading the embeddings from an already saved embedding file
