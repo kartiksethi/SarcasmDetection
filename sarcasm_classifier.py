@@ -126,3 +126,25 @@ if __name__ == '__main__':
         loss, accuracy = model.evaluate(x_test, y_test, verbose=0)
         print('Test Loss:{} \tTest Accuracy:{}'.format(loss, accuracy * 100))
 
+        # Plotting the results
+        # print(plot_data.history.keys())  # gives the different metrics stored during training
+
+        print("The graphs are displayed")
+        # Plotting the graph for accuracy
+        plt.plot(plot_data.history['acc'], 'r-')
+        plt.plot(plot_data.history['val_acc'], 'b-')
+        plt.xlabel('# of Epochs')
+        plt.ylabel('Accuracy')
+        plt.title("Accuracy vs Epochs")
+        plt.legend(['Train', 'Validation'], loc='upper right')
+        plt.show()
+
+        # Plotting the graph for loss
+        plt.plot(plot_data.history['loss'], 'r-')
+        plt.plot(plot_data.history['val_loss'], 'b-')
+        plt.xlabel('# of Epochs')
+        plt.title("Loss vs Epochs")
+        plt.ylabel('Loss')
+        plt.legend(['Train', 'Validation'], loc='upper right')
+        plt.show()
+
