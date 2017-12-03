@@ -25,9 +25,9 @@ if __name__ == '__main__':
                         help='Learning Rate for the optimizer')
     parser.add_argument('--optimizer', type=str, default="Adam",
                         help='Type of optimizer')
-    parser.add_argument('--batchsize', type=int, default=1,
+    parser.add_argument('--batchsize', type=int, default=32,
                         help='Number of sequences to process at a time')
-    parser.add_argument('--model-type', type=int, default=2,
+    parser.add_argument('--model-type', type=int, default=5,
                         help='Type of model to run from models.py')
     parser.add_argument('--kfolds', type=bool, default=False,
                         help='Defines whether we want to do k-fold cross-validation or not')
@@ -35,7 +35,8 @@ if __name__ == '__main__':
                         help='File path to save the final model')
     parser.add_argument('--model', default=None,
                         help='Give a file path of model to test')
-    parser.add_argument('--transfer-learning', type=str, default='glove.6B/glove.6B.300d.txt',
+    # give the name of the file path containing your pre-trained word-embeddings
+    parser.add_argument('--transfer-learning', type=str, default='../glove.6B/glove.6B.300d.txt',
                         help='File path to pre-trained glove embeddings')
     parser.add_argument('--trained-embeddings', default=None,
                         help='File path to word embeddings of words from sarcasmV2 dataset')
