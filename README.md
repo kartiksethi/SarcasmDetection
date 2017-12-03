@@ -12,17 +12,17 @@ Dataset used: [sarcasmV2 dataset](https://nlds.soe.ucsc.edu/sarcasm2).
 * Command line arguments for sarcasm_classifier.py:
 ```
   [--epochs]: Number of sweeps over the dataset to train
-  --lr: Learning Rate for the optimizer
-  --optimizer: Type of optimizer
-  --batchsize: Number of sequences to process at a time
-  --model-type: Type of model to run from models.py
-  --kfolds: Defines whether we want to do k-fold cross-validation or not
-  --save: File path to save the final model
-  --model: Give a file path of model to test
-  --transfer-learning: File path to pre-trained glove embeddings
-  --trained-embeddings: File path to word embeddings of words from sarcasmV2 dataset
-  --data-path: File path to dataset file
-  --model-summary: To enable or disable model summary
+  [--lr]: Learning Rate for the optimizer
+  [--optimizer]: Type of optimizer
+  [--batchsize]: Number of sequences to process at a time
+  [--model-type]: Type of model to run from models.py
+  [--kfolds]: Defines whether we want to do k-fold cross-validation or not
+  [--save]: File path to save the final model
+  [--model]: Give a file path of model to test
+  [--transfer-learning]: File path to pre-trained glove embeddings
+  [--trained-embeddings]: File path to word embeddings of words from sarcasmV2 dataset
+  [--data-path]: File path to dataset file
+  [--model-summary]: To enable or disable model summary
 ```
 
 #### Note: Please download the [GloVe embeddings](https://nlp.stanford.edu/projects/glove/) ([glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip)) and store them in appropriate directory before proceeding with transfer learning. One can use their own pre-trained word-embeddings as well.
