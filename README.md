@@ -5,8 +5,8 @@ Steps to be followed to make the code work:
 * Install latest version of [Keras](https://keras.io/) and [TensorFlow](https://www.tensorflow.org/install/)
 * Install the other python libraries:numpy, pandas, scikit-learn, matplotlib, etc.
 * **sarcasm_classifier.py** contains the code for training and testing the models
-  - Command line args:
-  - '''python
+Command line args:
+'''python
   --epochs: Number of sweeps over the dataset to train
   --lr: Learning Rate for the optimizer
   --optimizer: Type of optimizer
@@ -19,4 +19,4 @@ Steps to be followed to make the code work:
   --trained-embeddings: File path to word embeddings of words from sarcasmV2 dataset
   --data-path: File path to dataset file
   --model-summary: To enable or disable model summary
-  '''
+'''
