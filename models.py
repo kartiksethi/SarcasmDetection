@@ -31,10 +31,16 @@ class SarcasmModel:
 
 		# Selecting the model based on the type
 		if self.model_type == 1:  # basic neural network
+			print('-' * 100)
+			print("Model Selected: Basic neural network")
+			print('-' * 100)
 			lstm_output = Flatten()(embeddings)
 			final_output = Dense(1, activation='sigmoid')(lstm_output)
 
 		elif self.model_type == 2:  # LSTM based network
+			print('-' * 100)
+			print("Model Selected: LSTM based network")
+			print('-' * 100)
 			lstm_output = LSTM(self.hidden_units)(embeddings)
 			lstm_output = Dense(256, activation ='relu', kernel_initializer='he_normal', kernel_regularizer=l2(0.001))(lstm_output)
 			lstm_output = Dropout(0.3)(lstm_output)
@@ -43,6 +49,9 @@ class SarcasmModel:
 			final_output = Dense(1, activation='sigmoid')(lstm_output)
 
 		elif self.model_type == 3:  # Bidirectional LSTM without attention
+			print('-' * 100)
+			print("Model Selected: Bidirectional LSTM without attention")
+			print('-' * 100)
 			lstm_output = Bidirectional(LSTM(self.hidden_units))(embeddings)
 			lstm_output = Dense(256, activation ='relu', kernel_initializer='he_normal', kernel_regularizer=l2(0.001))(lstm_output)
 			lstm_output = Dropout(0.3)(lstm_output)
@@ -51,6 +60,9 @@ class SarcasmModel:
 			final_output = Dense(1, activation='sigmoid')(lstm_output)
 
 		elif self.model_type == 4:  # Bidirectional LSTM with attention
+			print('-' * 100)
+			print("Model Selected: Bidirectional LSTM with attention")
+			print('-' * 100)
 			lstm_output = Bidirectional(LSTM(self.hidden_units, return_sequences=True), merge_mode='ave')(embeddings)
 
 			# calculating the attention coefficient for each hidden state
@@ -75,6 +87,9 @@ class SarcasmModel:
 			final_output = Dense(1, activation='sigmoid')(final_output)
 
 		elif self.model_type == 5: # CNN-Bidirectional LSTM with attention
+			print('-' * 100)
+			print("Model Selected: CNN-Bidirectional LSTM with attention")
+			print('-' * 100)
 			# Hyper parameters for 1D Conv layer
 			filters = 32
 			kernel_size = 5

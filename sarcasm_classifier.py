@@ -42,6 +42,8 @@ if __name__ == '__main__':
                         help='File path to word embeddings of words from sarcasmV2 dataset')
     parser.add_argument('--data-path', default='sarcasm_v2.csv',
                         help='File path to dataset file')
+    parser.add_argument('--model-summary', type=bool, default=False,
+                        help='To enable or disable model summary')
 
     args = parser.parse_args()
     print("Args: %s" % args)
@@ -95,8 +97,10 @@ if __name__ == '__main__':
 
         #  Compile the model
         model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['acc'])
-        # Print model summary
-        print(model.summary())
+
+        if args.model_summary == True:
+            # Print model summary
+            print(model.summary())
 
         # Training the model
         if args.kfolds == False:  # training without k-fold cross-validation
