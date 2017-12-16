@@ -1,5 +1,6 @@
 # SarcasmDetection
-A deep learning implementation to classify texts as sarcastic or not sarcastic.
+
+A Bi-LSTM based attention model implementation to classify texts as sarcastic or not sarcastic.
 
 Dataset used: [sarcasmV2 dataset](https://nlds.soe.ucsc.edu/sarcasm2)
 
